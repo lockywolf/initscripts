@@ -154,6 +154,9 @@ source_config ()
     OVS*)
         DEVICETYPE="ovs"
         ;;
+    Bridge)
+        DEVICETYPE="eth"
+        ;;
     esac
     if [ -n "$HWADDR" ]; then
         HWADDR=$(echo $HWADDR | awk '{ print toupper($0) }')
